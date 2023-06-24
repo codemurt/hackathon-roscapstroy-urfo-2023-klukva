@@ -10,7 +10,7 @@ loaded_rf = joblib.load("rf_classifier.joblib")
 with open('tfidf-vec.pkl', 'rb') as f:
     vectorizer = pickle.load(f)
  
-st.sidebar.success("Выберете вид использования")
+#st.sidebar.success("Выберете вид использования")
  
 text =  st.text_area(label='Введите текст для анализа')
 text = list(sentenize(text))
