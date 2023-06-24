@@ -13,3 +13,7 @@
 `utils.py` — дополнительный функции для веб-сервиса и постобработки
 
 `Датасет.xlsx` — исходный датасет
+
+`rf_classifier.joblib` — веса для RandomForest
+
+`tfidf-vec.pkl` — векторизатор TF-IDF
