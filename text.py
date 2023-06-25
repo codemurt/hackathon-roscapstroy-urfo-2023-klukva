@@ -3,7 +3,7 @@ from annotated_text import annotated_text
 import pickle
 from razdel import sentenize
 import joblib
-from utils import post, clean_text, post_class_changer
+from utils import post, clean_text, post_class_changer, concate
  
 loaded_rf = joblib.load("rf_classifier.joblib")
  
@@ -20,7 +20,9 @@ results = loaded_rf.predict(vecs)
  
 results = post_class_changer(sents, results)
 results = post(results)
- 
+
+results, text = concate(results, text)
+
 classes = ['не принадлежит ни одному классу', 'requirements', 'terms', 'notes']
  
 res_text = []

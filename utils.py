@@ -77,3 +77,20 @@ def post(classes):
             used.append(c)
 
     return used
+
+def concate(res, text):
+    f = res[0]
+    t = text[0]
+ 
+    tuxha = []
+    results = [res[0]]
+    for idx, elem in enumerate(res[1:], start=1):
+        if f == elem:
+            t += text[idx]
+        else:
+            f = elem
+            tuxha.append(t)
+            t = text[idx]
+            results.append(f)
+    tuxha.append(t)
+    return results, tuxha
