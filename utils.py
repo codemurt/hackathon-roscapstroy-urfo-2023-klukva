@@ -16,7 +16,7 @@ def post_class_changer(sentences, classes, paterns = {1:p1, 2:p2}):
             for p in paterns[k]:
                 if p in sentences[i].lower():
                     res[i]=k
-                break
+                    break
     return res
 
 
